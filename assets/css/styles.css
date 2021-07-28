@@ -59,7 +59,7 @@ body {
   width: calc(98%);
   z-index: 1;
 }
-.content .input_madoka #input_field_madoka {
+.content .input_madoka .input_field_madoka {
   -webkit-appearance: none;
   background: transparent;
   border-radius: 0;
@@ -77,6 +77,10 @@ body {
   position: relative;
   width: 100%;
 }
+.content .input_madoka .input_field_madoka:focus + label {
+  transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
+  -webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
+}
 .content .input_madoka .input_label_madoka {
   -webkit-font-smoothing: antialiased;
   color: #7a7593;
@@ -89,6 +93,7 @@ body {
   padding: 0 1em;
   position: absolute;
   text-align: left;
+  transition: all 0.3s;
   user-select: none;
   width: 100%;
 }
@@ -96,6 +101,5 @@ body {
   display: block;
   padding: 1.6em 0;
   position: relative;
-  transition: transform 0.3s;
   width: 100%;
 }
